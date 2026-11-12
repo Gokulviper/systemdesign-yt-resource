@@ -1,0 +1,150 @@
+/*
+ * Design tokens. One rule governs colour: chrome stays neutral ink, and hue is
+ * reserved for system state. Blue means work is happening, green a successful
+ * reply, red a failure, ochre degradation, teal recovery, violet an event.
+ * State is always also carried by an icon or a word, never colour alone.
+ */
+:root {
+  --paper: #eceff3;
+  --surface: #ffffff;
+  --surface-2: #f5f7fa;
+  --ink: #15233a;
+  --ink-2: #3a4a61;
+  --muted: #627287;
+  --rule: #cfd6df;
+  --rule-strong: #aab5c3;
+  --grid-dot: #c9d1db;
+
+  --work: #1f6feb;
+  --ok: #13805a;
+  --warn: #a96604;
+  --fail: #c03a2d;
+  --recover: #0a8292;
+  --msg: #7449cc;
+
+  --work-bg: #e3edfd;
+  --ok-bg: #ddf2e8;
+  --warn-bg: #fbeed6;
+  --fail-bg: #fbe3e0;
+  --recover-bg: #daf1f3;
+  --msg-bg: #ece4fa;
+
+  --focus: #1f6feb;
+  --font-sans: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  --step--1: 0.8125rem;
+  --step-0: 0.9375rem;
+  --step-1: 1.125rem;
+  --step-2: 1.5rem;
+  --step-3: 2.125rem;
+  --step-4: 3rem;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  --radius-control: 6px;
+  --radius-panel: 10px;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #141c28;
+    --surface: #1b2533;
+    --surface-2: #212c3c;
+    --ink: #e5ebf3;
+    --ink-2: #bcc7d6;
+    --muted: #8e9cb0;
+    --rule: #2f3c4f;
+    --rule-strong: #46556b;
+    --grid-dot: #2c394b;
+    --work: #5c9bff;
+    --ok: #41c08d;
+    --warn: #e4a43e;
+    --fail: #f06a5c;
+    --recover: #3fc4d3;
+    --msg: #a98cf2;
+    --work-bg: #1b2d4b;
+    --ok-bg: #16352b;
+    --warn-bg: #3a2c15;
+    --fail-bg: #3f201d;
+    --recover-bg: #13353a;
+    --msg-bg: #2a2246;
+    --focus: #7fb0ff;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --paper: #141c28;
+  --surface: #1b2533;
+  --surface-2: #212c3c;
+  --ink: #e5ebf3;
+  --ink-2: #bcc7d6;
+  --muted: #8e9cb0;
+  --rule: #2f3c4f;
+  --rule-strong: #46556b;
+  --grid-dot: #2c394b;
+  --work: #5c9bff;
+  --ok: #41c08d;
+  --warn: #e4a43e;
+  --fail: #f06a5c;
+  --recover: #3fc4d3;
+  --msg: #a98cf2;
+  --work-bg: #1b2d4b;
+  --ok-bg: #16352b;
+  --warn-bg: #3a2c15;
+  --fail-bg: #3f201d;
+  --recover-bg: #13353a;
+  --msg-bg: #2a2246;
+  --focus: #7fb0ff;
+  color-scheme: dark;
+}
+
+/* Component-kind palette: identifies what a box IS. State (healthy, failed…)
+   is shown separately by the border, halo, hatching and status pill. */
+:root {
+  --accent: #4f46e5;
+  --accent-ink: #ffffff;
+  --k-client: #5145d8;  --k-client-bg: #ebe9fd;
+  --k-gateway: #0786b8; --k-gateway-bg: #dcf1fb;
+  --k-service: #2f5fd0; --k-service-bg: #e2eafb;
+  --k-db: #d26a06;      --k-db-bg: #fdecd9;
+  --k-queue: #8b3fd9;   --k-queue-bg: #f1e5fc;
+  --k-worker: #cc2e78;  --k-worker-bg: #fbe3ef;
+  --k-cache: #4d8a0c;   --k-cache-bg: #e6f3d6;
+  --k-cdn: #0f8a8a;     --k-cdn-bg: #d9f2f1;
+  --k-store: #8a6a12;   --k-store-bg: #f5ecd3;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --accent: #8b8cf8; --accent-ink: #12172a;
+    --k-client: #a29bff;  --k-client-bg: #2a2754;
+    --k-gateway: #4fc3ef; --k-gateway-bg: #16354a;
+    --k-service: #7aa2ff; --k-service-bg: #1d2c52;
+    --k-db: #ffa04d;      --k-db-bg: #432a12;
+    --k-queue: #c48bff;   --k-queue-bg: #35204f;
+    --k-worker: #ff7ab5;  --k-worker-bg: #46203a;
+    --k-cache: #9bd65a;   --k-cache-bg: #263a14;
+    --k-cdn: #4fd1cf;     --k-cdn-bg: #153a3a;
+    --k-store: #e2c063;   --k-store-bg: #3a3116;
+  }
+}
+:root[data-theme="dark"] {
+  --accent: #8b8cf8; --accent-ink: #12172a;
+  --k-client: #a29bff;  --k-client-bg: #2a2754;
+  --k-gateway: #4fc3ef; --k-gateway-bg: #16354a;
+  --k-service: #7aa2ff; --k-service-bg: #1d2c52;
+  --k-db: #ffa04d;      --k-db-bg: #432a12;
+  --k-queue: #c48bff;   --k-queue-bg: #35204f;
+  --k-worker: #ff7ab5;  --k-worker-bg: #46203a;
+  --k-cache: #9bd65a;   --k-cache-bg: #263a14;
+  --k-cdn: #4fd1cf;     --k-cdn-bg: #153a3a;
+  --k-store: #e2c063;   --k-store-bg: #3a3116;
+}

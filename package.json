@@ -1,0 +1,12 @@
+{
+  "name": "system-design-lab",
+  "private": true,
+  "description": "Interactive, failure-injectable system design labs. Static HTML/CSS/JS, no build step, no runtime dependencies.",
+  "scripts": {
+    "build": "node tools/build-labs.js",
+    "test": "node --test tests/*.test.js",
+    "test:browser": "python3 tests/browser_check.py",
+    "verify": "npm run build && npm test && npm run test:browser",
+    "serve": "python3 -m http.server 8080"
+  }
+}
